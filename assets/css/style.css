@@ -1,0 +1,520 @@
+
+/*
+* Database Pengembangan Pariwisata
+* style css - v1.4
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background:#eaeaea;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #666666;
+}
+a:hover {
+  color: #666666;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header .logo {
+    text-transform: uppercase;
+    line-height: 23px;
+}
+header .logo b {
+    color: #ff9600;
+    display: inherit;
+    font-size: 1.3em;
+}
+
+header button {
+  cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------
+#intro peta
+--------------------------------------------------------------*/
+#intro {
+    width: 100%;
+    height:100%;
+    background: #83dbf9;
+    position: relative;
+    overflow: hidden;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfedf7+0,83dbf9+100 */
+    background: rgb(207,237,247); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(207,237,247,1) 0%, rgba(131,219,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(207,237,247,1) 0%,rgba(131,219,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(207,237,247,1) 0%,rgba(131,219,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfedf7', endColorstr='#83dbf9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#intro .intro-text {
+    margin-top: 60px;
+    color: #0009;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#intro .intro-text h2 {
+    margin: 30px 0 10px 0;
+    padding: 0 15px;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -1px;
+}
+
+
+/*-------------------------------------------------------------
+#sabuk background
+--------------------------------------------------------------*/
+.masthead {
+    height: 150px;
+    background: no-repeat center -18px;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 25px;
+}
+
+.masthead .pos {
+  padding-top: 90px;
+  display:flex !important;
+  justify-content: space-between;
+  align-items: center !important;
+}
+
+.masthead .page-heading {
+   /* position: absolute;
+    bottom: 27px;
+    margin-left: -6px;*/
+    color: #fff;
+}
+.masthead .page-heading h1 {
+    font-size: 1.6em;
+    font-weight: lighter;
+    margin: 0;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.masthead .select_prov {
+  /* position: absolute;
+   right:10px;
+   bottom: 30px;*/
+   width:410px;
+
+}
+
+/*--------------------------------------------------------------
+# box destinasi
+--------------------------------------------------------------*/
+.destinasi {
+  margin-bottom: 25px;
+}
+.destinasi a, .destinasi span {
+  margin: 0 10px;
+  padding-bottom: 19px;
+}
+.destinasi a.hover,
+.destinasi a:hover,
+.destinasi span.hover {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 2px solid  #007bff;
+}
+
+a.edit {
+  color: red;
+  font-size: 12px;
+}
+a.edit:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Header Judul
+--------------------------------------------------------------*/
+
+.content-header {
+    position: relative;
+    padding: 0;
+    margin-bottom: 25px;
+}
+.content-header>h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.content-header>h1>small {
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 300;
+}
+
+/*breadcrumb*/
+.content-header>.breadcrumb {
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    padding: 0 0;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    border-radius: 2px;
+    list-style: none;
+}
+.breadcrumb>li {
+    display: inline-block;
+}
+.content-header>.breadcrumb>li>a {
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
+}
+.breadcrumb>.active {
+    color: #777;
+}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: '>\00a0';
+}
+
+/*--------------------------------------------------------------
+# CARD Content
+--------------------------------------------------------------*/
+/*card biar tingginya sama pake height 100%*/
+
+.category {
+    margin-bottom: 25px;
+}
+.category .card {
+  height: 100%;
+  border-top: 2px solid #f7951c;
+}
+.category .card .card-title {
+  text-align: center;
+  text-align: center;
+  padding: 20px 0 5px 0;
+  color: #f7951c;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+}
+.category .card .pict {
+  width: 100%;
+  padding-bottom: 1.25rem;
+}
+.category .card .card-body {
+  padding-top: 0px
+}
+.category .card .card-text {
+   font-size: .8em;
+}
+.category .card .card-text img{
+   width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# PAGE DETAIL
+--------------------------------------------------------------*/
+.detail {
+  margin-bottom: 25px;
+  padding-top: 15px;
+}
+.detail h1.judul {
+    letter-spacing: -0.5px;
+    margin: 10px 0 5px 0;
+    font-size: 2.5em;
+    font-weight: 500;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    color:  #0062cc;
+}
+.detail h2.author,
+.detail h2.author a {
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+    color: #909090;
+}
+.detail .date {
+    border-top: 1px solid #dadada;
+    font-size: .9em;
+    padding: 10px 0;
+    border-bottom: 1px solid #dadada;
+    margin: 20px 0 25px 0;
+}
+
+
+.detail h3 {
+    padding-top: 5px;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.detail .pict {
+    /*fluid*/
+    max-width: 100%;
+    height: auto;
+    /*rounded*/
+    border-radius: 0.25rem !important;
+    margin-bottom: 15px;
+}
+.detail .caption {
+    font-size: .9em;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.detail .caption:after {
+    background-color: #60b7f3;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    height: 1px;
+}
+
+.detail .blockquote {
+    line-height: normal;
+    display: block;
+    border-left: 1px solid #60b7f3;
+    margin: 0 0 20px 0;
+
+    padding: 20px;
+    font-size: 1.2em;
+    font-family: "Merri-Weather", Georgia, Arial, Helvetica;
+}
+.detail .blockquote-footer {
+    padding-top: 10px;
+}
+
+
+/*table*/
+.wrap-table {
+    display: inline-table;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table.custom {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+table.custom td, table.custom th {
+    border: 2px solid #ddd;
+    padding: 30px;
+}
+table.custom tr:nth-child(even) {
+    background-color: #F5F5F5;
+}
+table.custom tr:hover {
+    background-color: #ddd;
+}
+table.custom th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background: #60b7f3;
+    color: white;
+}
+
+/*--------------------------------------------------------------
+# Peta
+--------------------------------------------------------------*/
+.maps {
+    height: 100%;
+    width: 100%;
+  }
+.vmapx {
+    width: 75%;
+    height:calc(100vh - 265px);
+    height: 640px;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.tooltip_map {
+      background: #fff;
+      box-shadow: 1px 1px 10px #0000001f;
+      padding: 8px;
+      z-index: 2;
+      position: relative;
+      border-radius: 4px;
+      display:none;
+
+      font-size: 15px;
+      font-weight: bold;
+      color: #656667;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+  font-size: 0.9em;
+}
+
+
+/*--------------------------------------------------------------
+# Frame
+--------------------------------------------------------------*/
+
+/* style modal */
+.modal-lg {
+      max-width: 70%;
+}
+.modal .modal-header {
+    background: #484e6f;
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+}
+.modal .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1em;
+    color: #fff;
+}
+
+.modal .col-form-label {
+    padding-top: 0;
+}
+.modal .close {
+    color: #f9f7f7;
+    text-shadow: 0 1px 0 #000;
+    cursor: pointer;
+}
+.modal .close:focus, .modal .close:hover {
+    color: #fff;
+}
+ .modal .btn-link {
+    font-size: 0.8em;
+    color: #333;
+}
+.modal.col-form-label {
+    font-size: 13px;
+}
+.modal .modal-footer {
+  padding-top: 0px;
+}
+
+/*carousel*/
+.slide .carousel-caption {
+
+    position: static;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding: 15px 19px 0 19px;
+    color: none;
+    text-align: left;
+    font-size: .8em;
+    color: #666;
+}
+.slide .carousel-control-prev,
+.slide .carousel-control-next {
+    bottom: 139px;
+    height: 196px;
+}
+
+/* upload file gambar */
+#image-preview,
+#image-preview1,
+#image-preview2,
+#image-preview3,
+#image-preview4,
+#image-preview5 {
+    width: 100%;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    background-color: #dedede;
+    color: #ecf0f1;
+    margin-bottom: 5px;
+}
+#image-preview  input,
+#image-preview1 input,
+#image-preview2 input,
+#image-preview3 input,
+#image-preview4 input,
+#image-preview5 input {
+  line-height: 200px;
+  font-size: 200px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+#image-preview label,
+#image-preview1 label,
+#image-preview2 label,
+#image-preview3 label,
+#image-preview4 label,
+#image-preview5 label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #007bff;
+    width: 160px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 47px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+/*popup gallery*/
+.mfp-title {
+    text-align: left;
+    line-height: 18px;
+    color: #ffffffe6;
+    word-wrap: break-word;
+    padding-right: 36px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 200;
+}
