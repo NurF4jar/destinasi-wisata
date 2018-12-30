@@ -1,2 +1,2 @@
 # destinasi-wisata
-This is Back-UP of Kemenpar RI Applications
+This is Back-UP of project Web Applications
