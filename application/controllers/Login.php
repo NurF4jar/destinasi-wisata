@@ -22,7 +22,7 @@ class Login extends CI_Controller{
 	public function validasi()
 	{
         $result     = '';
-		$username 	= $this->input->post('username');
+				$username 	= $this->input->post('username');
         $password 	= $this->input->post('password');
 		//Berfungsi untuk memanggil fungsi ambil_data pada class login_model
 		$cek_users  = $this->login->check_user($username);

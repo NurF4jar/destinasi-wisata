@@ -5,6 +5,18 @@
 
 <?php include "_head.php";?>
 
+<style>
+
+  @media print
+  {
+    .btn, .p-2, .footer, .page-heading, .masthead
+    {
+      display: none !important;
+    }
+  }
+
+</style>
+
 <body>
 
   <?php include "_header-login.php";?>
@@ -16,7 +28,7 @@
 
             <div class="pos flex-column flex-md-row ">
 
-                <div class="page-heading ">
+                <div class="page-heading">
                    <h1><b>Regional I</b></h1>
                 </div>
 
@@ -53,7 +65,7 @@
               <small>Prov. Sumatera Utara</small>
             </h1> -->
             <button type="button" class="btn btn-secondary" onclick="history.back();" value="Back"><i class="fa fa-arrow-left"></i> Dashboard </button>
-            <button type="button" class="btn btn-success" data-value="atraksi" onclick="window.print()"><i class="fa fa-print"></i> Print</button>
+            <button type="button" class="btn btn-success" data-value="atraksi" onclick="window.print()"><i class="fa fa-print"></i>Print</button>
 
             <!-- <ol class="breadcrumb">
               <li><a href="/pariwisata/"><i class="fa fa-dashboard"></i> Home</a></li>

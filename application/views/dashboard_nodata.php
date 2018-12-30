@@ -6,6 +6,14 @@
   color:#FFC801;
 }
 
+@media print
+{
+	.btn, .p-2, .footer, .page-heading, .nav, .masthead, .logo
+	{
+		display: none !important;
+	}
+}
+
 </style>
 <html lang="en">
 
@@ -20,6 +28,12 @@
 <?php
 $get_destinasi 	= $this->db->get_where('destinasi', array('id_provinsi' => $id_provinsi));
 $get_provinsi 	= $this->db->get_where('provinsi', array('id' => $id_provinsi));
+
+$user_login = $this->session->userdata('users_login');
+$name       = $user_login['auth_menu'];
+$username   = ucwords($user_login['username']);
+$user_level = $user_login['user_level'];
+
 ?>
 
   <main>
@@ -400,7 +414,7 @@ $get_provinsi 	= $this->db->get_where('provinsi', array('id' => $id_provinsi));
 
                 <div class="col-md-4">
                   <div class="card box-shadow wow fadeInLeft">
-                    <h5 class="card-title">Pengembangan Desa Wisata</h5>
+                    <h5 class="card-title">Wisata Perdesaan dan Perkotaan</h5>
                     <div class="card-body" style="overflow:hidden; max-height:375px">
                       <p class="card-text">
                          <?=$database_destinasi[0]['pengembangan_desa'];?>
@@ -453,7 +467,7 @@ $get_provinsi 	= $this->db->get_where('provinsi', array('id' => $id_provinsi));
                 </div>
                 <div class="col-md-4">
                   <div class="card box-shadow wow fadeInRight">
-                    <h5 class="card-title">Dana Lokasi Khusus (DAK)</h5>
+                    <h5 class="card-title">Dana Alokasi Khusus (DAK)</h5>
                     <div class="card-body" style="overflow:hidden; max-height:375px">
                       <p class="card-text">
                          <?=$database_destinasi[0]['dana_lokasi_khusus'];?>
@@ -743,22 +757,6 @@ $('form').submit(function (e) {
             }
         });
     }
-
-    // if(submit) {
-    //       $.ajax({
-    //          url: "<?php echo base_url('proses/add_detail/'); ?>",
-    //           type: "POST",
-    //           data: $('#'+this.id).serialize(),
-    //           cache: false,
-    //           contentType: false,
-    //           processData: false,
-    //           success: function(feedback)
-    //           {
-    //             console.log(feedback);
-    //           }
-    //         });
-    // }
-
     return false;
 });
 

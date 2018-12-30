@@ -8,6 +8,7 @@ class Proses extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('Proses_model', 'proses');
+    $this->load->model('Activity_log_model', 'activity');
   }
 
 	public function index()
@@ -83,9 +84,20 @@ class Proses extends CI_Controller {
             }
 
             if($check_data->num_rows() > 0) {
-              // var_dump($id_destinasi);
+
               $this->db->where(array('id_destinasi' => $id_destinasi));
               $this->db->update('images', $data_image);
+
+              //Activity LOG
+              $user_login = $this->session->userdata('users_login');
+
+              $this->activity->save([
+                'username'=>ucwords($user_login['username']),
+                'user_level'=>$user_login['user_level'],
+                'email'=>$user_login['email'],
+                'activity'=>'Update Images'
+              ]);
+              //Activity LOG
 
               $id_image = $check_data->row()->id;
               $result = 'success update';
@@ -93,6 +105,17 @@ class Proses extends CI_Controller {
               $data_image['id_destinasi']  = $id_destinasi;
               // save data Destinasi
               $this->proses->saveImage($data_image);
+
+              //Activity LOG
+              $user_login = $this->session->userdata('users_login');
+
+              $this->activity->save([
+                'username'=>$user_login['username'],
+                'user_level'=>$user_login['user_level'],
+                'email'=>$user_login['email'],
+                'activity'=>'Insert Images'
+              ]);
+              //Activity LOG
 
               $result   = 'success insert';
             }
@@ -141,6 +164,17 @@ class Proses extends CI_Controller {
           'id' => $id_destinasi)
       );
       $this->db->update('destinasi', $data_destinasi);
+
+      //Activity LOG
+      $user_login = $this->session->userdata('users_login');
+
+      $this->activity->save([
+        'username'=>$user_login['username'],
+        'user_level'=>$user_login['user_level'],
+        'email'=>$user_login['email'],
+        'activity'=>'Update Detail'
+      ]);
+      //Activity LOG
 
       $id_destinasi = $check_data->row()->id;
 

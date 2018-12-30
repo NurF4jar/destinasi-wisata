@@ -20,7 +20,7 @@
                    <h1>Pulau Sumatera / Provinsi Sumatera Utara</h1>
                 </div>
 
-                <div class="input-group select_prov">
+                <!-- <div class="input-group select_prov">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Pilih Provinsi</label>
                   </div>
@@ -36,7 +36,7 @@
                     <option value="">Prov. Kepulauan Bangka Belitung </option>
                     <option value="">Prov. Lampung </option>
                   </select>
-                </div>
+                </div> -->
 
             </div>
 
@@ -48,15 +48,10 @@
       <div class="container">
 
           <section class="content-header">
-            <!-- <h1>
-              Dashboard
-              <small>Prov. Sumatera Utara</small>
-            </h1> -->
-            <button type="button" class="btn btn-secondary" onclick="history.back();" value="Back"><i class="fa fa-arrow-left"></i> Dashboard </button>
+            <button type="button" class="btn btn-secondary" onclick="history.back();" value="Back"><i class="fa fa-arrow-left"></i> Kembali </button>
             <ol class="breadcrumb">
-              <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li><a href="">Dashboard</a></li>
-              <li class="active">Add Member</li>
+              <li><a onclick="history.back();" value="Back"><i class="fa fa-dashboard"></i><b>Home</b></a></li>
+              <li class="active"><b>Add Member</b></li>
             </ol>
           </section>
 

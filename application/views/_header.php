@@ -2,6 +2,8 @@
 <?php
 $user_login = $this->session->userdata('users_login');
 $name       = $user_login['auth_menu'];
+$username   = ucwords($user_login['username']);
+$user_level = $user_login['user_level'];
  ?>
 
 <!--
@@ -15,18 +17,24 @@ Header
             <b>Pengembangan Destinasi Wisata</b>
         </div>
 <?php
-  if ($name == 'admin' || $name == 'editor') {
+  if ($user_level == 'admin'){
     echo '<nav class="my-2 my-md-0 wow fadeInUp">
-              <span class="p-2 text-blue">Halo, <b>Admin!</b></span>
+              <span class="p-2 text-blue">Hallo, <b>'.$username.' !</b></span>
+              <a class="p-2 text-blue" href="admin/add_members">Add Member</a>
+              <a class="p-2 text-blue" href="activity_log">Log Activity</a>
               <a class="fa fa-sign-out" href="admin/logout"> Logout</a>
-	      <a class="p-2 text-blue" href="admin/add_members">Add Member</a>
+            </nav>';
+  } elseif ($user_level == 'editor') {
+    echo '<nav class="my-2 my-md-0 wow fadeInUp">
+              <span class="p-2 text-blue">Hallo, <b>'.$username.' !</b></span>
+              <a class="fa fa-sign-out" href="admin/logout"> Logout</a>
             </nav>';
   } else {
     echo '<button type="button" class="btn btn-primary wow fadeInUp" data-toggle="modal" data-target="#modallogin">
       Login
     </button>';
   }
-   
+
  ?>
 
     </div>
